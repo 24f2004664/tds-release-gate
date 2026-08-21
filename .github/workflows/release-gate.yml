@@ -16,11 +16,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [20, 22]
+        node-version:
+          - 20
+          - 22
 
     steps:
+      steps:
       - name: "TDS Identity: 24f2004664@ds.study.iitm.ac.in"
-        run: echo "TDS Identity: 24f2004664@ds.study.iitm.ac.in"
+        run: 'echo "TDS Identity: 24f2004664@ds.study.iitm.ac.in"'
 
       - name: Checkout
         uses: actions/checkout@v4
